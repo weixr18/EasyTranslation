@@ -1,0 +1,152 @@
+【备用代码】
+//DBOP.cpp
+/*
+    //创建表格
+        c
+
+
+        if(!m_SqlQuery.exec(
+                        "create table missions("
+                        "name text primary key,"
+                        "releaser text" ","
+                        "releaseState int" ","
+                        "srclanguage int" ","
+                        "tarlanguage int" ","
+                        "srctext text" ","
+                        "introduction text,"
+                        "missionDDL text,"
+                        "recruitMTime text, "
+                        "awardamount int, "
+                        "manager text, "
+                        "mngCandidates text "
+                        ")" ))
+        {
+            qDebug() << "Error: Fail to create table missions."<< m_SqlQuery.lastError();
+        }
+        else
+        {
+            qDebug() << "Table missions created!";
+        }
+
+
+        if(!m_SqlQuery.exec(
+                        "create table mngmissions("
+                        "name text primary key,"
+                        "releaser text" ","
+                        "releaseState int" ","
+                        "srclanguage int" ","
+                        "tarlanguage int" ","
+                        "srctext text" ","
+                        "introduction text,"
+                        "missionDDL text,"
+                        "recruitMTime text, "
+                        "awardamount int, "
+                        "manager text, "
+                        "mngCandidates text, "
+                        "manageState int, "
+                        "recruitTTime text, "
+                        "trslCandidates text, "
+                        "translators text,"
+                        "lastTranslation text"
+                        ")" ))
+        {
+            qDebug() << "Error: Fail to create table mngmisions."<< m_SqlQuery.lastError();
+        }
+        else
+        {
+            qDebug() << "Table mngmissions created!";
+        }
+*/
+
+/*
+
+        if(!m_SqlQuery.exec(
+                        "create table submissions("
+                        "name text, "
+                        "translator text, "
+                        "releaser text" ","
+                        "srclanguage int" ","
+                        "tarlanguage int" ","
+                        "introduction text,"
+                        "missionDDL text,"
+                        "manager text, "
+                        "manageState int, "
+                        "subMissionState int, "
+                        "srcSubText text, "
+                        "history text, "
+                        "translation text, "
+                        "primary key (name, translator)"
+                        ")" ))
+        {
+            qDebug() << "Error: Fail to create table submisions."<< m_SqlQuery.lastError();
+        }
+        else
+        {
+            qDebug() << "Table submissions created!";
+        }
+*/
+
+/*
+    if(!m_SqlQuery.exec(
+                        "create table messages("
+                        "id int primary key, "
+                        "content text, "
+                        "sender text" ","
+                        "receiver text" ","
+                        "sendtime text"
+                        ")" ))
+        {
+            qDebug() << "Error: Fail to create table messages."<< m_SqlQuery.lastError();
+        }
+        else
+        {
+            qDebug() << "Table messages created!";
+        }
+*/
+
+
+/*
+    if(!m_SqlQuery.exec("drop table users"))
+    {
+        qDebug() << "Error: Fail to drop table users."<< m_SqlQuery.lastError();
+    }
+    else
+    {
+        qDebug() << "Table users droped.";
+    }
+
+
+
+    if(!m_SqlQuery.exec("drop table missions"))
+    {
+        qDebug() << "Error: Fail to drop table missions."<< m_SqlQuery.lastError();
+    }
+    else
+    {
+        qDebug() << "Table missions droped.";
+    }
+
+
+
+    if(!m_SqlQuery.exec("drop table mngmissions"))
+    {
+        qDebug() << "Error: Fail to drop table mngmissions."<< m_SqlQuery.lastError();
+    }
+    else
+    {
+        qDebug() << "Table mngmissions droped.";
+    }
+
+
+    if(!m_SqlQuery.exec("drop table submissions"))
+    {
+        qDebug() << "Error: Fail to drop table submissions."<< m_SqlQuery.lastError();
+    }
+    else
+    {
+        qDebug() << "Table submissions droped.";
+    }
+
+
+*/
+
