@@ -74,7 +74,8 @@ SOURCES += \
     src/submittranslation.cpp \
     src/user.cpp \
     src/useraccount.cpp \
-    src/userinfo.cpp
+    src/userinfo.cpp \
+    old/dbsetup.cpp
 
 HEADERS += \
     src/aplmcfmdialog.h \

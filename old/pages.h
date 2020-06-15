@@ -1,5 +1,6 @@
 #ifndef PAGES_H
 #define PAGES_H
+/*
 #include <vector>
 #include "CTP.h"
 #include "missioninfo.h"
@@ -26,5 +27,9 @@ private:
 
 
 };
+*/
+
+
+int dbSetUp();
 
 #endif // PAGES_H

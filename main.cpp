@@ -8,6 +8,7 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QDebug>
+#include "old/pages.h"
 
 /*************************************************************************
 【函数名称】       main

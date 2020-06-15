@@ -68,10 +68,10 @@ Regist_3::~Regist_3()
 void Regist_3::RegistSucceed()
 {
     QMessageBox* suc = new QMessageBox(QMessageBox::Information, "Notice",
-                                       "Regestration succeed!", QMessageBox::Yes, this);
-    connect(suc, &QMessageBox::accepted, this, &Regist_3::Scd_ReturnMain);
+                                       "Regestration succeed!", QMessageBox::Ok, this);
+    connect(suc, &QMessageBox::rejected, this, &Regist_3::Scd_ReturnMain);
+    connect(suc, &QMessageBox::buttonClicked, this, &Regist_3::Scd_ReturnMain);
     suc->show();
-    qDebug() << "01111";
 }
 
 
@@ -85,13 +85,11 @@ void Regist_3::RegistSucceed()
 *************************************************************************/
 void Regist_3::Scd_ReturnMain()
 {
-    qDebug() << "12222";
     tempScore = User::FirstScore(ui->comboBox->currentIndex(),
                                  ui->lineEdit->text().toDouble());
     P_USER p1("");
     Platform::u_regist(p1, tempName, tempPW, tempScore, tempRealName, tempID,
                        tempEmail);
-    qDebug() << "23333";
 
     emit s_regSucceed(p1);
     this->close();

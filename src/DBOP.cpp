@@ -11,8 +11,12 @@
 //构造函数
 DBOP::DBOP()
 {
-    //建立并打开数据库
-    m_DB.setDatabaseName("./data/MyDataBase.db");
+
+    //打开数据库
+    m_DB.setDatabaseName("../data/MyDataBase.db");
+    m_DB.setUserName("ET");
+    m_DB.setPassword("easytranslation");
+
 
     if (!m_DB.open())
     {
@@ -21,13 +25,13 @@ DBOP::DBOP()
     else
     {
         qDebug() << "Succeed to connect database." ;
+        m_SqlQuery = QSqlQuery(m_DB);
     }
 
 }
 
 DBOP::~DBOP()
 {
-
     //关闭数据库
     m_DB.close();
 }
@@ -122,10 +126,12 @@ std::vector<int> DBOP::SearchMessages(const std::string &user)
 //获取最大消息ID
 int DBOP::GetMaxMessageID()
 {
-    m_SqlQuery.exec("SELECT MAX(id) FROM messages");
-    if (!m_SqlQuery.exec())
+
+    bool f = m_SqlQuery.exec("select max(id) from messages");
+    if (!f)
     {
         qDebug() << m_SqlQuery.lastError();
+        qDebug() << "2333333333";
         return -2;
     }
     else
